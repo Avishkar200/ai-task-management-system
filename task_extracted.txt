@@ -1,0 +1,168 @@
+ Python & AI Integration Intern – 24-Hour 
+ Assessment 
+ AI-Powered Task Management System 
+ Build a simple  AI-Powered Task Management System  using  Python. 
+ The application should allow authenticated users to manage tasks and should integrate an AI 
+ service for task-related functionality. 
+ The primary focus is  Python backend development, REST  APIs, authentication, database 
+ usage, authorization, and AI API integration  . 
+ 1. Technology Requirements 
+ Use: 
+ ●  Python 
+ ●  FastAPI or Flask 
+ ●  MySQL or PostgreSQL 
+ ●  JWT  authentication 
+ ●  Any commonly used LLM API such as: 
+ ○  OpenAI 
+ ○  Google Gemini 
+ ○  Anthropic 
+ ○  Other equivalent provider 
+ You may use additional Python libraries where appropriate. 
+ 2. Users & Authentication 
+ Create a  users  table/model containing: 
+
+ None  
+ None  
+ None  
+ ●  id 
+ ●  name 
+ ●  email 
+ ●  password 
+ ●  role 
+ ●  created_at 
+ ●  updated_at 
+ Supported roles: 
+ ●  user 
+ ●  admin 
+ Minimum Requirements 
+ ●  User registration 
+ ●  User login 
+ ●  Return a JWT token on successful login 
+ ●  Include test credentials in the README 
+ 3. Tasks 
+ Create a  tasks  table/model containing: 
+ ●  id 
+ ●  user_id 
+ ●  title 
+ ●  description 
+ ●  status 
+ ●  created_at 
+ ●  updated_at 
+
+ None  
+ Supported statuses: 
+ ●  Pending 
+ ●  In Progress 
+ ●  Testing 
+ ●  Completed 
+ Each task must belong to the user who created it. 
+ Implement REST APIs for: 
+ ●  Create task 
+ ●  List tasks 
+ ●  View task 
+ ●  Update task 
+ ●  Update task status 
+ Access Control 
+ Regular User 
+ ●  View own tasks 
+ ●  Create tasks 
+ ●  Edit own tasks 
+ ●  Cannot modify another user's tasks 
+ ●  Cannot update task status 
+ Admin 
+ ●  View tasks 
+ ●  Create tasks 
+ ●  Edit tasks 
+ ●  Update task status 
+ 4. AI Integration 
+ Implement  at least one  AI-powered feature from the following: 
+ Option A: Generate Task Description 
+
+ None  
+ None  
+ ●  POST /api/tasks/generate-description 
+ Accept a task title and use AI to generate a suitable description. 
+ Option B: Generate Task Summary 
+ ●  POST /api/tasks/{id}/summarize 
+ Use the task title and description to generate a concise summary. 
+ AI Requirements 
+ ●  Store the AI API key in an environment variable. 
+ ●  Do not commit API keys or  .env  files. 
+ ●  Include AI configuration in  .env.example  . 
+ ●  Handle AI API failures and invalid responses. 
+ ●  Validate structured AI responses where applicable. 
+ ●  Keep AI-related code reasonably separated from the rest of the application. 
+ The candidate does not need to submit an API key.  The README should explain how the AI 
+ provider and required environment variables are configured. 
+ 5. Database 
+ Use  MySQL or PostgreSQL  . 
+ Use migrations/schema and seeders to create the database structure and sample data. 
+ Do not submit a separate SQL file. 
+ 6. API Testing 
+ Provide a  Postman collection  covering: 
+
+ None  
+ ●  Registration 
+ ●  Login 
+ ●  Regular user task APIs 
+ ●  Admin task APIs 
+ ●  Authorization failure for regular users 
+ ●  AI endpoint 
+ 7. Project Structure & Error Handling 
+ Maintain a clean and understandable Python project structure. 
+ Separate areas such as: 
+ ●  app/ 
+ ●  ├──  api/ 
+ ●  ├──  models/ 
+ ●  ├──  schemas/ 
+ ●  ├──  services/ 
+ ●  ├──  auth/ 
+ ●  ├──  ai/ 
+ ●  ├──  database/ 
+ ●  └──  main.py 
+ The exact structure is up to the candidate. 
+ Handle common errors such as: 
+ ●  Invalid credentials 
+ ●  Invalid/missing JWT 
+ ●  Unauthorized access 
+ ●  Resource not found 
+ ●  Invalid request data 
+ ●  Database errors 
+ ●  AI API failures 
+ Use appropriate HTTP status codes. 
+
+ 8. README & Submission 
+ Include: 
+ ●  Source code 
+ ●  Database migrations/schema 
+ ●  Seeders 
+ ●  README.md 
+ ●  .env.example 
+ ●  Postman collection 
+ ●  requirements.txt  or  pyproject.toml 
+ The README should contain: 
+ ●  Project overview 
+ ●  Setup instructions 
+ ●  Python version 
+ ●  Database configuration 
+ ●  Environment variables 
+ ●  AI configuration 
+ ●  How to run the application 
+ ●  API endpoints 
+ ●  Test credentials 
+ ●  AI feature implemented 
+ ●  Any important assumptions/decisions 
+ Do not submit: 
+ ●  .env  files containing secrets 
+ ●  API keys 
+ ●  Passwords 
+ ●  venv  or other unnecessary generated files 
+ 9. AI Assistance 
+ AI tools such as  ChatGPT, GitHub Copilot, Claude,  Gemini, or similar tools are allowed  . 
+ Candidates must understand, review, test, and be able to explain the code they submit if asked 
+ during the interview. 
+
+ 10. Time Limit 
+ 24 hours from the time the assignment is received. 
+ The goal is to produce a  clean, functional, and understandable  Python backend with a 
+ meaningful AI integration  within the given time. 
